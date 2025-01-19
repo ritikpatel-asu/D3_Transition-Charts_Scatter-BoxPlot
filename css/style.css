@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+.header {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+h1, h3 {
+    margin: 20px 0;
+    color: #fff;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    max-width: 1400px;
+    width: 100%;
+    padding: 20px;
+}
+.control-panel {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    transition: transform 0.3s ease;
+}
+.control-panel:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.control-panel h5 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+.custom-select {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+.custom-select:hover {
+    background-color: #f0f8ff;
+    cursor: pointer;
+}
+.plots {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.scatter-plot, .box-plots {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.panel-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+svg {
+    width: 100%;
+    height: 400px;
+}
+.box-plots svg,
+.scatter-plot svg {
+    padding-bottom: 50px;
+    overflow: visible;
+    transform: translateY(0px);
+}
+.lasso {
+    fill-opacity: 0.2;
+    stroke: blue;
+    stroke-width: 2;
+}
+.selected-point {
+    stroke: red;
+    stroke-width: 2;
+}
+.box {
+    fill: none;
+    stroke-width: 2;
+}
+.outlier {
+    fill: orange;
+}
+.scatter-plot, .box-plots {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.scatter-plot svg, .box-plots svg {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    margin-left: 120px;
+}
+.color-key {
+    display: flex;
+    flex-direction: column; 
+    margin-top: 10px;
+}
